@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
@@ -66,7 +66,7 @@ function MarketDepth($N=20){
   }
 
    
-//BTC �µ�	   
+//BTC 下单
 function  Trade($Price,$Amount,$Tradetype){					  
 	 $parameters=array("accesskey"=>$this->access_key,"amount"=>$Amount,"currency"=>"btc","method"=>"order","price"=>$Price,"tradeType"=>$Tradetype);	 
    $url= "https://trade.zb.com/api/order";
@@ -75,7 +75,7 @@ function  Trade($Price,$Amount,$Tradetype){
 	 return $res;
 }		
 
-//BTC ȡ���µ�	 
+//BTC 取消订单
   function	CancelOrder($OrderID){
 	$parameters=array("accesskey"=>$this->access_key,"currency"=>"btc","id"=>$OrderID,"method"=>"cancelOrder");
   $url='https://trade.chbtc.com/api/cancelOrder';
@@ -84,7 +84,7 @@ function  Trade($Price,$Amount,$Tradetype){
 	return $res;
 	}
 
-//LTC ȡ���µ�	 
+//LTC 取消订单 
   function	CancelOrder_ltc($OrderID){
 	$parameters=array("accesskey"=>$this->access_key,"currency"=>"ltc","id"=>$OrderID,"method"=>"cancelOrder");
   $url='https://trade.chbtc.com/api/cancelOrder';
@@ -93,7 +93,7 @@ function  Trade($Price,$Amount,$Tradetype){
 	return $res;
 	}
 
-//��ѯ�ʽ�
+
  function Fund(){
  $parameters=array("accesskey"=>$this->access_key,"method"=>"getAccountInfo");
  $url='https://trade.chbtc.com/api/getAccountInfo';
@@ -102,7 +102,7 @@ function  Trade($Price,$Amount,$Tradetype){
  return $res;
 }	
 
-//��ѯBTCί��
+//获取订单信息
  function  GetOrder($OrderID){
  $parameters=array("accesskey"=>$this->access_key,"currency"=>"btc","id"=>$OrderID,"method"=>"getOrder");
  $url= 'https://trade.chbtc.com/api/getOrder';
@@ -111,7 +111,7 @@ function  Trade($Price,$Amount,$Tradetype){
  return $res;
 }
 
-//��ѯLTCί��
+//获取订单信息
  function  GetOrder_ltc($OrderID){
  $parameters=array("accesskey"=>$this->access_key,"currency"=>"ltc","id"=>$OrderID,"method"=>"getOrder");
  $url= 'https://trade.chbtc.com/api/getOrder';
