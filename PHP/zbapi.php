@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>chbtc</title>
+<title>zb</title>
 </head>
 <?php
 
-//$Chbtc=new ChbtcAPI ;
-//$Fond_chbtc=$Chbtc->Fund();
-//var_dump($Fond_chbtc);
+//$zb=new zbAPI ;
+//$Fond_zb=$zb->Fund();
+//var_dump($Fond_zb);
 
-class ChbtcAPI {
+class zbAPI {
 var  $access_key="***";
 var  $secret_key="***";
 
@@ -78,7 +78,7 @@ function  Trade($Price,$Amount,$Tradetype){
 //BTC 取消订单
   function	CancelOrder($OrderID){
 	$parameters=array("accesskey"=>$this->access_key,"currency"=>"btc","id"=>$OrderID,"method"=>"cancelOrder");
-  $url='https://trade.chbtc.com/api/cancelOrder';
+  $url='https://trade.zb.com/api/cancelOrder';
 	$post=$this->createSign($parameters);
 	$res=$this->httpRequest($url,$post);
 	return $res;
@@ -87,7 +87,7 @@ function  Trade($Price,$Amount,$Tradetype){
 //LTC 取消订单 
   function	CancelOrder_ltc($OrderID){
 	$parameters=array("accesskey"=>$this->access_key,"currency"=>"ltc","id"=>$OrderID,"method"=>"cancelOrder");
-  $url='https://trade.chbtc.com/api/cancelOrder';
+  $url='https://trade.zb.com/api/cancelOrder';
 	$post=$this->createSign($parameters);
 	$res=$this->httpRequest($url,$post);
 	return $res;
@@ -96,7 +96,7 @@ function  Trade($Price,$Amount,$Tradetype){
 
  function Fund(){
  $parameters=array("accesskey"=>$this->access_key,"method"=>"getAccountInfo");
- $url='https://trade.chbtc.com/api/getAccountInfo';
+ $url='https://trade.zb.com/api/getAccountInfo';
  $post=$this->createSign($parameters);
  $res=$this->httpRequest($url,$post);
  return $res;
@@ -105,7 +105,7 @@ function  Trade($Price,$Amount,$Tradetype){
 //获取订单信息
  function  GetOrder($OrderID){
  $parameters=array("accesskey"=>$this->access_key,"currency"=>"btc","id"=>$OrderID,"method"=>"getOrder");
- $url= 'https://trade.chbtc.com/api/getOrder';
+ $url= 'https://trade.zb.com/api/getOrder';
  $post=$this->createSign($parameters);
  $res=$this->httpRequest($url,$post);
  return $res;
@@ -114,7 +114,7 @@ function  Trade($Price,$Amount,$Tradetype){
 //获取订单信息
  function  GetOrder_ltc($OrderID){
  $parameters=array("accesskey"=>$this->access_key,"currency"=>"ltc","id"=>$OrderID,"method"=>"getOrder");
- $url= 'https://trade.chbtc.com/api/getOrder';
+ $url= 'https://trade.zb.com/api/getOrder';
  $post=$this->createSign($parameters);
  $res=$this->httpRequest($url,$post);
  return $res;
