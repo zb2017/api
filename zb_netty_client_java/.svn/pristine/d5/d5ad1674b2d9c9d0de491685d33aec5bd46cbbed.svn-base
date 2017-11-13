@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: Administrator
+Class-Path: lib/fastjson-1.1.41.jar lib/log4j-1.2.16.jar lib/netty-all
+ -4.0.28.Final.jar
+Build-Jdk: 1.8.0_144
+Created-By: Maven Integration for Eclipse
+Main-Class: websocketx.client.WebSocketClient
+
