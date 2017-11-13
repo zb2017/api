@@ -15,12 +15,6 @@
  */
 package websocketx.client;
 
-import java.math.BigDecimal;
-import java.net.URI;
-import java.nio.channels.UnsupportedAddressTypeException;
-
-import com.alibaba.fastjson.JSONObject;
-
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelException;
@@ -39,6 +33,15 @@ import io.netty.handler.codec.http.websocketx.WebSocketVersion;
 import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
+
+import java.math.BigDecimal;
+import java.net.URI;
+import java.nio.channels.UnsupportedAddressTypeException;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.alibaba.fastjson.JSONObject;
+import com.zb.kits.MapSort;
 
 public class WebSocketClient {
 	private String url;
@@ -173,7 +176,7 @@ public class WebSocketClient {
 		
 		data.put("sign", sign);
 		
-		System.out.println("参数:"+data.toString());
+		System.out.println(data.toString());
 		
         this.channel.writeAndFlush(new TextWebSocketFrame(data.toString()));
 	}
@@ -516,21 +519,21 @@ public class WebSocketClient {
 			try {
 				client.connect();
 				System.out.println("================================"+client.isAlive());
-				client.addChannel("ltcbtc_ticker");//通过
-				client.addChannel("ltcbtc_depth");//通过
-				client.addChannel("ltcbtc_trades");//通过
+//				client.addChannel("ltcbtc_ticker");//通过
+//				client.addChannel("ltcbtc_depth");//通过
+//				client.addChannel("ltcbtc_trades");//通过
 				
 //    			client.order( 0.019258, 1, "ethbtc", 0);
-    			client.order( 0.009258, 1, "ltcbtc", 1);
-    			client.cancelOrder(20151006160133624L , "eth_btc");
-    			client.getOrder(20151006160133556L , "eth_btc");
-    			client.getOrders(1,1 , "eth_btc");
-    			client.getOrdersIgnoreTradeType(1,10 , "eth_btc");
-    			client.getUnfinishedOrdersIgnoreTradeType(1,10 , "eth_btc");
-				client.getOrdersNew( 1,10, 1, "eth_btc");
-				client.cancelWithdraw("eth_btc", "20160425916");
+//    			client.order( 0.009258, 1, "ltcbtc", 1);
+//    			client.cancelOrder(20151006160133624L , "ethbtc");
+//    			client.getOrder(20151006160133556L , "ethbtc");
+//    			client.getOrders(1,1 , "ethbtc");
+//    			client.getOrdersIgnoreTradeType(1,10 , "ethbtc");
+//    			client.getUnfinishedOrdersIgnoreTradeType(1,10 , "ethbtc");
+//				client.getOrdersNew( 1,10, 1, "ethbtc");
+				client.cancelWithdraw("ethbtc", "20160425916");
 				
-				client.getAccountInfo();
+//				client.getAccountInfo();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
