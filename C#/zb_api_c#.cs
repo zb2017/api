@@ -120,7 +120,7 @@ namespace zb {
       String accesskey = "accesskey";
       String secretkey = "secretkey";
       String baseURL = "https://trade.zb.com/api/";
-      String param = "accesskey="+accesskey+"method=getAccountInfo";
+      String param = "accesskey="+accesskey+"&method=getAccountInfo";
       secretkey = digest(secretkey);
       String sign = hmacSign(param, secretkey);
       DateTime timeStamp=new DateTime(1970,1,1);
