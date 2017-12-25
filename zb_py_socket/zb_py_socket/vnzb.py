@@ -10,8 +10,6 @@ import websocket
 import urllib2, hashlib,struct,sha,time
 
 
-
-# OKEX网站
 zb_usd_url = "wss://api.zb.com:9999/websocket"
 zb_all_symbols = ["ltc_btc"]
 
