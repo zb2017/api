@@ -21,8 +21,8 @@ sleep(3)
 
 #api.spotTrade("btc_qc", 1 , "50" , "0.01")
 '''
-{"message":"鎿嶄綔鎴愬姛","no":"0","data":"{entrustId:2017121051685}","code":1000,"channel":"btcqc_order","success":true}
-{"message":"鎿嶄綔鎴愬姛","no":"0","data":"{entrustId:2017121051713}","code":1000,"channel":"btcqc_order","success":true}
+{"message":"操作成功","no":"0","data":"{entrustId:2017121051685}","code":1000,"channel":"btcqc_order","success":true}
+{"message":"操作成功","no":"0","data":"{entrustId:2017121051713}","code":1000,"channel":"btcqc_order","success":true}
 '''
 #api.spotUserInfo()
 
