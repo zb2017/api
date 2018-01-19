@@ -25,7 +25,7 @@ public class RestTest {
 	// 正式
 	public final String ACCESS_KEY = "";
 	public final String SECRET_KEY = "";
-	public final String URL_PREFIX = "https://trade.zb.com/api/";// 测试环境,测试环境是ttapi测试不通
+	public final String URL_PREFIX = "https://trade.zb.com/api/";
 	public static String API_DOMAIN = "http://api.zb.com";
 	
 	
