@@ -2,7 +2,7 @@
 
 from vnzb import *
 
-# 在OkCoin网站申请这两个Key，分别对应用户名和密码
+# 在ZB网站申请这两个Key，分别对应用户名和密码
 apiKey = 'apiKey'
 secretKey = 'secretKey'
 
