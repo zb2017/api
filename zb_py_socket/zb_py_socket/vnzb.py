@@ -17,8 +17,8 @@ class ZB_Sub_Spot_Api(object):
     """基于Websocket的API对象"""
     def __init__(self):
         """Constructor"""
-        self.apiKey = ''        # 用户名
-        self.secretKey = ''     # 密码
+        self.apiKey = ''        # apiKey
+        self.secretKey = ''     # secretKey
 
         self.ws_sub_spot = None          # websocket应用对象  现货对象
 
