@@ -2,7 +2,7 @@
 
 from vnzb import *
 
-# 在zb网站申请这两个Key，分别对应用户名和密码
+# 在zb网站申请这两个Key
 apiKey = 'apiKey'
 secretKey = 'secretKey'
 
